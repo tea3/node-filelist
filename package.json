@@ -1,0 +1,34 @@
+{
+  "name": "node-filelist",
+  "version": "0.0.1",
+  "main": "index",
+  "dependencies": {
+    "async": "^2.0.1"
+  },
+  "description": "Get a list of the absolute path in the file location. This plugin reading all the files in a folder recursively.",
+  "devDependencies": {},
+  "author": {
+    "email": "tea3gtinfo@gmail.com",
+    "name": "tea3",
+    "url": "https://tea3.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/tea3/node-filelist/issues"
+  },
+  "keywords": [
+    "node",
+    "recursively",
+    "path"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "tea3gt",
+      "email": "tea3gtinfo@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tea3/node-filelist.git"
+  }
+}
