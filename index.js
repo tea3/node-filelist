@@ -5,7 +5,6 @@ var path            = require("path");
 var async           = require("async");
 var readExtName     = [];
 var retFileArr      = [];
-var WPATH           = process.cwd();
 var callback_Function;
 var q;
 var option;
@@ -47,7 +46,7 @@ function readFile(inFilePath, inCallback){
             fs.stat(inFilePath, function(err,stats){
                 if(!err){
                     retFileArr.push({
-                        "path" : path.join(WPATH , inFilePath) ,
+                        "path" : inFilePath ,
                         "stats" : stats
                     });
                     inCallback();
@@ -58,7 +57,7 @@ function readFile(inFilePath, inCallback){
             });
         }else{
             retFileArr.push({
-                "path" : path.join(WPATH , inFilePath)
+                "path" : inFilePath
             });
             inCallback();
         }
@@ -126,7 +125,7 @@ module.exports.read = function(inFileList, inOption ,inCallback_Func){
     saveReadExtName(inOption);
 
     for(var i=0; i<inFileList.length; i++){
-        q.push({"file":inFileList[i]}, function() {});
+        q.push({"file": path.resolve(inFileList[i]) }, function() {});
     }
 };
 
